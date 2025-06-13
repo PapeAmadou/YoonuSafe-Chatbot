@@ -103,7 +103,7 @@ client = Together(api_key="dfa99859140c27543a57d08dc16614533cfc96ab331c9f0b13419
 
 def call_model_api(prompt):
     prompt = lily_repond(prompt, 3)
-    prompt = f"{prompt} Important : Réponds uniquement en HTML, utilise uniquement les balises suivantes : <p>, <b>, <i>, <ul>, <li>, <code>, <pre> SI BESOIN. Ne mets aucun autre texte hors de ces balises. Pas besoin de repeter dans ta reponse que t'as suivi ces indicatiion."
+    prompt = f"{prompt} Important : Tu dois répondre  uniquement en HTML, utilise uniquement les balises suivantes : <p>, <b>, <i>, <ul>, <li>, <code>, <pre> SI BESOIN. Ne mets aucun autre texte hors de ces balises. Pas besoin de repeter dans ta reponse que t'as suivi ces indicatiion."
 
     try:
         response = client.chat.completions.create(
