@@ -38,8 +38,6 @@ Pour lancer le frontend en mode développement Docker :
 2. Construire et lancer le conteneur :  
    sudo docker compose up --build
 
-L’application sera accessible sur http://localhost:3000 (ou autre port configuré).
-
 Pour arrêter le frontend :  
 - Arrêter et supprimer :  
   docker-compose down  
