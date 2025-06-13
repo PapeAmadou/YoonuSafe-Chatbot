@@ -67,7 +67,7 @@ const ChatPage: React.FC = () => {
         formData.append("conversation_id", activeConversationId.toString());
       }
   
-      response = await fetch("http://172.20.10.10:5000/chat-with-files", {
+      response = await fetch("http://localhost:5000/chat-with-files", {
         method: "POST",
         headers: {
           Authorization: "Bearer " + token,
@@ -82,7 +82,7 @@ const ChatPage: React.FC = () => {
       }
   
     } else {
-      response = await fetch("http://172.20.10.10:5000/chat", {
+      response = await fetch("http://localhost:5000/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -122,7 +122,7 @@ const ChatPage: React.FC = () => {
 
   const loadConversation = async (conversationId: number) => {
     const token = localStorage.getItem("access_token");
-    const response = await fetch(`http://172.20.10.10:5000/conversations/${conversationId}`, {
+    const response = await fetch(`http://localhost:5000/conversations/${conversationId}`, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -143,7 +143,7 @@ const ChatPage: React.FC = () => {
   const handleAddNewConversation = async () => {
     const token = localStorage.getItem("access_token");
   
-    const response = await fetch("http://172.20.10.10:5000/chat", {
+    const response = await fetch("http://localhost:5000/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

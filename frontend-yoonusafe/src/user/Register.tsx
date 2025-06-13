@@ -14,7 +14,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 async function register(username: string, name: string, password: string) {
   try {
-    const response = await fetch("http://172.20.10.10:5000/register", {
+    const response = await fetch("http://localhost:5000/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

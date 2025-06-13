@@ -43,7 +43,7 @@ const fetchConversations = async (
   setConversations: React.Dispatch<React.SetStateAction<Conversation[]>>
 ) => {
   const token = localStorage.getItem("access_token");
-  const response = await fetch("http://172.20.10.10:5000/conversations", {
+  const response = await fetch("http://localhost:5000/conversations", {
     headers: {
       Authorization: "Bearer " + token,
     },
